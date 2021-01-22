@@ -1,5 +1,6 @@
 
 
+
 // kilometerToMeter problem solving start
 function kilometerToMeter(kilometer) {
     if (kilometer > 0) {
@@ -13,6 +14,21 @@ function kilometerToMeter(kilometer) {
 var result = kilometerToMeter(10);
 console.log(result);
 // kilometerToMeter problem solving end
+
+// budgetCalculator problem solving start
+function budgetCalculator(amountOfProducts) {
+    var totalPrice = 0;
+    for (i = 0; i < 3; i++) {
+        var watchesPrice = amountOfProducts[0] * 50;
+        var phonesPrice = amountOfProducts[1] * 100;
+        var laptopsPrice = amountOfProducts[2] * 500;
+        totalPrice = watchesPrice + phonesPrice + laptopsPrice;
+    }
+    return totalPrice;
+}
+var result = [1, 3, 4];
+console.log(budgetCalculator(result));
+// budgetCalculator problem solving end
 
 // hotelCost to meter problem solving start
 function hotelCost(day) {
@@ -40,12 +56,11 @@ function hotelCost(day) {
         return "Please, give your spending days";
     }
 }
-var result = hotelCost(10);
+var result = hotelCost(11);
 console.log(result);
 // hotelCost to meter problem solving end
 
 // megaFriend to meter problem solving start
-
 function megaFriend(friendsName) {
     var length = 0;
     var index = 0;
@@ -57,8 +72,8 @@ function megaFriend(friendsName) {
             longestName = friendsName[i];
         }
     }
-    console.log(longestName);
+    return longestName;
 }
-var friendsName = ["kamal hosen", "jamal pramanik", "rosul islam", "selim mahmud", "shoyaib khan"];
-megaFriend(friendsName);
+var friendsName = ["kamal", "jamal", "", "selim", "shoyaib", "samsul shekh"];
+console.log(megaFriend(friendsName));
 // megaFriend to meter problem solving end
